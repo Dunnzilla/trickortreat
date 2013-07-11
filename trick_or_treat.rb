@@ -17,7 +17,7 @@ class TrickOrTreater
   def knock(house)
     for_me = self # <--  Just to make this next expression more fun to read:
 
-    if house.answers_door(for_me) && house.believes_age(for_me)
+    if house.answers_door(for_me)
       candies_dispensed = house.gimme_some_candies
       self.put_candies_in_bag( candies_dispensed )
     end
