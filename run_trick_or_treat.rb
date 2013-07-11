@@ -19,11 +19,11 @@ def run_demo
   ]
 
   kids = [
-    TrickOrTreater.new("Billy", 12),
-    TrickOrTreater.new("Marina", 8),
+    TrickOrTreater.new("Lyla", 12),
+    TrickOrTreater.new("Olive", 8),
     TrickOrTreater.new("Dr. Horseface", 73),
-    TrickOrTreater.new("Little Timmy", 5),
-    TrickOrTreater.new("Cher", 5),
+    TrickOrTreater.new("Jack", 5),
+    TrickOrTreater.new("Mo", 18),
   ]
   puts "----"
   puts "There are #{kids.count} costumed people trick-or-treating."

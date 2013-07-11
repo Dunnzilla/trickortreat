@@ -1,6 +1,7 @@
 #!?usr/bin/env ruby
 
 
+# -----------------------------------------------
 class TrickOrTreater
   attr_accessor :name, :age, :candies_in_bag
 
@@ -17,7 +18,7 @@ class TrickOrTreater
   def knock(house)
     for_me = self # <--  Just to make this next expression more fun to read:
 
-    if house.answers_door(for_me)
+    if house.answers_door(for_me) && house.believes_age(for_me)
       candies_dispensed = house.gimme_some_candies
       self.put_candies_in_bag( candies_dispensed )
     end
@@ -33,6 +34,7 @@ class TrickOrTreater
 
 end
 
+# -----------------------------------------------
 class House
   attr_accessor :name, :candies_left
   def initialize(name, starting_candy=0)
@@ -56,7 +58,7 @@ class House
   end
 
   def believes_age(trick_or_treater)
-    return true if trick_or_treater.age < 16
+    return true if trick_or_treater.age > 0
     return false
   end
 
